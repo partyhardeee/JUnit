@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class Marks {
+public class MarksMethodTests {
     @Test
     public void When_MarkLessThan36_Expect_ResultIs2() {
         Assert.assertEquals("2", MarksCalculate.getMarkResult(2));
@@ -50,6 +50,12 @@ public class Marks {
     @Test
     public void When_MarkIs100_Expect_ResultIs5() {
         Assert.assertEquals("5", MarksCalculate.getMarkResult(100));
+    }
+
+    @Test
+    public void When_MarkIs_Null() {
+        Integer a = null;
+        Assert.assertEquals("2", MarksCalculate.getMarkResult(a));
     }
 
 
