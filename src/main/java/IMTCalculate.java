@@ -10,9 +10,9 @@ public class IMTCalculate {
             userResult = "нормальная масса тела";
         } else if (userIndex > 25) {
             userResult = "избыточная масса тела";
-            if (heightCm.equals(0.0f)) userResult += "указан некорректный рост";
-            return userResult;
         }
-        return userResult;
+
+        if (heightCm.equals(0.0f)) userResult += "указан некорректный рост";
+            return userResult;
     }
 }
